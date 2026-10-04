@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fleshbook - [Ton Prénom]</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- En-tête -->
+  <header>
+    <h1>Fleshbook</h1>
+    <p>Une archive vivante de ma vie.</p>
+  </header>
+
+  <!-- Timeline (comme un réseau social) -->
+  <div class="timeline">
+    <!-- Exemple de post -->
+    <article class="post">
+      <h2>1981</h2>
+      <p>Premier jour !</p>
+      <img src="images/photo1.png" alt="Photo illustrative">
+      <a href="posts/2026-07-21.html">Lire la suite</a>
+    </article>
+
+    <!-- Ici, tu ajouteras tes autres posts -->
+  <div class="add-post">
+  <h3>Ajouter un nouveau post</h3>
+  <form action="https://formspree.io/f/ton-id-de-formulaire" method="POST">
+    <input type="text" name="title" placeholder="Titre" required>
+    <textarea name="content" placeholder="Contenu" required></textarea>
+    <input type="text" name="tags" placeholder="Tags (ex: #voyage #travail)">
+    <button type="submit">Envoyer</button>
+  </form>
+</div>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>Mis à jour le <span id="date"></span></p>
+  </footer>
+
+  <!-- Script pour la date automatique -->
+  <script>
+    document.getElementById('date').textContent = new Date().toLocaleDateString('fr-FR');
+  </script>
+</body>
+</html>
